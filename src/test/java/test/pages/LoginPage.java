@@ -4,9 +4,14 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import jcifs.smb.NtlmPasswordAuthentication;
+import jcifs.smb.SmbException;
+import jcifs.smb.SmbFile;
 import test.util.PageObjectUtil;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -36,6 +41,37 @@ public class LoginPage  extends PageObject{
     	coordenada[0] = coordenada[0].trim();
     	coordenada[1] = coordenada[1].trim();
     	File appDir = new File("src/test/resources/apps/app-release.apk");
+    	String rutaApk = "smb://lap-jenkins/apps/app-release.apk";
+    	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication("lap-jenkins", "administrador", "Lhuyz666");
+    	SmbFile dir=null;
+    	
+		
+    	try {
+			dir = new SmbFile(rutaApk, auth);
+		} catch (MalformedURLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+  
+//	  	try {
+//			for (SmbFile f : dir.listFiles())
+//			{
+//			    System.out.println(f.getName());
+//			}
+//		} catch (SmbException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+    	
+    	File resulta = new File(dir.getUncPath());
+    	
+    	System.out.println("***" + resulta.getAbsolutePath());
+    	System.out.println(appDir.getAbsolutePath());
+    
+    	
+    	
+//		\\lap-jenkins\apps
+    	
    	try {
 			System.out.println("Inicia la construccion");
 		DesiredCapabilities caps = new DesiredCapabilities();
@@ -47,12 +83,16 @@ public class LoginPage  extends PageObject{
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
-		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
+//		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
+		caps.setCapability(MobileCapabilityType.APP, resulta.getAbsolutePath());
 		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
 		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
 		caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);
 		
 		System.out.println(" URL");
+		
+
+		
 		URL url = new URL("http://192.168.1.13:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
 		
