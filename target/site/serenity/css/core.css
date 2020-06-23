@@ -280,18 +280,6 @@ h3.discreet-story-header {
     /*border: #6495ed solid thin;*/
     padding: 4px;
 }
-
-.discreet-requirement-narrative-title table {
-    border: #6495ed solid thin;
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.discreet-requirement-narrative-title td, th {
-    padding: 0.25em;
-}
-
 .tags {
     vertical-align: text-top;
     padding: 4px;
@@ -1601,18 +1589,7 @@ ul.second-level-requirements  {
 
 .projectname {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-    float:right;
-}
-
-.projecttitle {
     font-weight:normal; font-size:2em; color:#428bca; position:relative;
-    text-align: right;
-}
-
-.projectsubtitle {
-    font-weight:normal; font-style: italic; font-size:1.25em; color:#428bca; position:relative;
-    display: block;
-    text-align: right;
 }
 
 .togglePieChart {
@@ -2295,9 +2272,4 @@ span.evidence {
 .scenario-docs blockquote {
     font-style: italic;
     font-size: 1em;
-}
-
-.manual-test-result {
-    display:block;
-    margin-left: 4em;
 }

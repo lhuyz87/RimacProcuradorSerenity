@@ -10,6 +10,7 @@ test\xpath\XpathDetalleTipoAtencion.class
 test\steps\RealizarAtencionSteps.class
 test\util\PageObjectUtil.class
 test\pages\ResumeCasoPage.class
+test\pages\LoginPage2.class
 test\util\ExcelUtil.class
 test\runner\RunBefore.class
 test\util\PageObjectUtil$1.class
