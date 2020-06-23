@@ -36,5 +36,5 @@ Feature: RimacProcurador
     ###DATOS###@DataPrueba|1@02-FinalizarAtencion
     Examples: 
       |0|ubicacion|usuario|password|placa|tipo atencion|tipo siniestro|mensaje|
-      |1|-12.0965159, -77.0278309|procuradorautoapp1@gmail.com|Test2020#|ABA435|Denuncia Policial|Choque|El proceso terminó correctamente.|
+      |1|-12.1691665, -77.0001753|procuradorautoapp1@gmail.com|Test2020#|ABA435|Denuncia Policial|Choque|El proceso terminó correctamente.|
       |2|-12.1691665, -77.0001753|procuradorautoapp2@gmail.com|Test2020#|ABA436|Constatación de daños|NA|El proceso terminó correctamente.|
