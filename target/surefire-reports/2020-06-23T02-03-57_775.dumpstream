@@ -1,4 +1,0 @@
-# Created at 2020-06-23T02:04:02.294
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Eclipse_WS\RimacProcuradorSerenityJenkins\RimacProcuradorMobileSrenity\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-

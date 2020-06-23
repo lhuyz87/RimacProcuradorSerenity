@@ -27,7 +27,7 @@ pipeline {
         			try {
         				//sh ("mvn verify package -P Rimac")
         				//sh ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
-        				sh ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' \"")
+        				//sh ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' \"")
         				sh ("mvn serenity:aggregate")
         				echo 'Ejecucion de pruebas sin errores...'
         			}
