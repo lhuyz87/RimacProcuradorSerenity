@@ -59,6 +59,7 @@ public class LoginPage  extends PageObject{
 //		driver = new AppiumDriver<MobileElement>(url, caps);
 //		driver2= new AndroidDriver(url, caps);
 		driver2=  new AppiumDriver(url, caps);
+		wdw = new WebDriverWait(driver2, 10);
 		double longitud=Double.parseDouble(coordenada[0]);
 		double latitud=-Double.parseDouble(coordenada[1])*-1;
 		System.out.println(" longitud  " + longitud);
