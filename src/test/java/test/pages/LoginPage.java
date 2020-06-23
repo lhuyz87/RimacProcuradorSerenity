@@ -40,7 +40,7 @@ public class LoginPage  extends PageObject{
     	String coordenada[] = ubicacion.split(",");
     	coordenada[0] = coordenada[0].trim();
     	coordenada[1] = coordenada[1].trim();
-    	File appDir = new File("src/test/resources/apps/app-release.apk");
+//    	File appDir = new File("src/test/resources/apps/app-release.apk");
     	String rutaApk = "smb://lap-jenkins/apps/app-release.apk";
     	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication("lap-jenkins", "administrador", "Lhuyz666");
     	SmbFile dir=null;
@@ -66,7 +66,7 @@ public class LoginPage  extends PageObject{
     	File resulta = new File(dir.getUncPath());
     	
     	System.out.println("***" + resulta.getAbsolutePath());
-    	System.out.println(appDir.getAbsolutePath());
+//    	System.out.println(appDir.getAbsolutePath());
     
     	
     	
