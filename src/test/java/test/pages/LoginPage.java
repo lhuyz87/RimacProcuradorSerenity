@@ -28,7 +28,7 @@ public class LoginPage  extends PageObject{
 //	public static AndroidDriver driver2;
 	private WebDriverWait wdw = null;
 	private long wdwTimeOut = 300L;
-	protected AppiumDriver driver2;
+	public static AppiumDriver driver2;
 	
 	PageObjectUtil pageObjectUtil = new PageObjectUtil();
 	XpathLogin xpathLogin  = new XpathLogin();
