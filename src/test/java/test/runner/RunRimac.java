@@ -1,14 +1,13 @@
 package test.runner;
 
-import org.junit.Test;
+
 import org.junit.runner.RunWith;
 import test.util.ExcelUtilPropio;
-
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+
 
 @RunWith(RunPersonalizar.class)
-@CucumberOptions(features = { "src/test/resources/features/" },  tags = {"@FinalizarAtencion"}, glue = { "" })
+//@CucumberOptions(features = { "src/m/" },  tags = {"@FinalizarAtencion"}, glue = { "test" })
 
 
 public class RunRimac 

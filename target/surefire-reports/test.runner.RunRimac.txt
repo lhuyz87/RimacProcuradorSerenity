@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: test.runner.RunRimac
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.518 s - in test.runner.RunRimac
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.937 s - in test.runner.RunRimac
