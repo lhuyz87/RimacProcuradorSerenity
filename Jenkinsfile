@@ -44,7 +44,7 @@ pipeline {
         		script {
                     try {
                     	//sh ("echo ${WORKSPACE}")
-                    	bat ("echo ${defTimestamp}")
+                    	//bat ("echo ${defTimestamp}")
                     
                     
                     	//publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}/target/site/serenity", reportFiles: 'index2.html', reportName: 'Evidencia', reportTitles: 'EvidenciaPruebas'])
