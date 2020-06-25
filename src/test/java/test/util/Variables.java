@@ -20,7 +20,7 @@ public class Variables {
 	
 	
 	//Ruta remota data
-	private static final String RutaRemota = "smb://lap-reta/DataPool/RimacProcurador/";
+	public static final String RutaRemota = "smb://lap-reta/DataPool/RimacProcurador/";
 	public static final String file_remota = RutaRemota + archivoDP.concat(".xlsx");
 	
 	
