@@ -57,7 +57,7 @@ public class LeedDataDriven implements Inout {
 		String res = "";
 		System.out.println("HOJAS " + hoja);
 		//Se comenta  para usar file remoto
-//		File file = new File(Variables.file_01);
+		File file = new File(Variables.file_01);
 		
 		//Codigo para manejo de archivo remoto
     	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(Variables.dominioDP, Variables.usuarioDP, Variables.passwordDP);
@@ -70,7 +70,7 @@ public class LeedDataDriven implements Inout {
 			e1.printStackTrace();
 		}
 		
-    	File file = new File(dir.getUncPath());
+//    	File file = new File(dir.getUncPath());
     	System.out.println("*********** " + file);
     	System.out.println("*********** " + file.getAbsolutePath());
     	
@@ -78,7 +78,7 @@ public class LeedDataDriven implements Inout {
 		
 
 		if (file.isFile()) {
-			FileInputStream fileInputStream = new FileInputStream(file.getAbsoluteFile());
+			FileInputStream fileInputStream = new FileInputStream(file);
 			Workbook workbook = WorkbookFactory.create(fileInputStream);
 			Sheet sheet = !hoja.isEmpty() ? workbook.getSheet(hoja) : workbook.getSheetAt(0);
 			int ultimaFilaAfectada = sheet.getLastRowNum();

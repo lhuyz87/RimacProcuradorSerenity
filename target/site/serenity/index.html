@@ -141,7 +141,7 @@
             <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-06-2020 00:44</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-06-2020 18:08</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -156,8 +156,7 @@
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div class="test-count-title">
-                                5 test scenarios 
-                                    (including 5 rows of test data)
+                                0 test scenarios 
                                  |
                                     <a href="results.csv" title="Download CSV"> <i class="fa fa-download"
                                                                                     title="Download CSV"></i></a>
@@ -184,54 +183,6 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-sm-4">
-                                                            <div style="width:300px;"
-                                                                 class="chart-container automated-and-manual-results">
-                                                                <div class="ct-chart ct-square"></div>
-                                                            </div>
-                                                            <script>
-
-                                                                var labels = [' ', ' ', '100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-                                                                // Our series array that contains series objects or in this case series data arrays
-
-                                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 5}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
-
-                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                                // as you saw in the previous example
-                                                                var options = {
-                                                                    width: 350,
-                                                                    height: 300
-                                                                };
-
-
-                                                                new Chartist.Pie('.ct-chart', {
-                                                                    series: series,
-                                                                    labels: labels
-                                                                }, {
-                                                                    plugins: [Chartist.plugins.tooltip()],
-                                                                    donut: true,
-                                                                    donutWidth: 60,
-                                                                    donutSolid: true,
-                                                                    startAngle: 270,
-                                                                    showLabel: true
-                                                                }, options);
-
-
-                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                                    new Chartist.Pie('.ct-chart', {
-                                                                        series: series,
-                                                                        labels: labels
-                                                                    }, {
-                                                                        plugins: [Chartist.plugins.tooltip()],
-                                                                        donut: true,
-                                                                        donutWidth: 60,
-                                                                        donutSolid: true,
-                                                                        startAngle: 270,
-                                                                        showLabel: true
-                                                                    }, options);
-                                                                });
-
-
-                                                            </script>
                                                     </div>
                                                     <div class="col-sm-8">
 
@@ -255,12 +206,11 @@
                                                                 <td class="automated-stats"> </td>
                                                             </tr>
                                                             <tr>
-                                                                    <td class="aggregate-result-count">
-                                                                        <a href="result_pending.html"><i
-                                                                                class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending</a>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
                                                                     </td>
-                                                                <td class="automated-stats">5</td>
-                                                                <td class="automated-stats">100%</td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -305,7 +255,7 @@
                                                             </tr>
                                                             <tr class="summary-stats">
                                                                 <td class="aggregate-result-count">Total</td>
-                                                                <td class="automated-stats">5</td>
+                                                                <td class="automated-stats">0</td>
                                                                 <td class="automated-stats"></td>
                                                             </tr>
                                                             </tbody>
@@ -327,11 +277,11 @@
                                                             </thead>
                                                             <tbody>
                                                             <tr>
-                                                                <td>282ms</td>
-                                                                <td>236ms</td>
-                                                                <td>50ms</td>
-                                                                <td>232ms</td>
-                                                                <td>141ms</td>
+                                                                <td>0ms</td>
+                                                                <td>0ms</td>
+                                                                <td>0ms</td>
+                                                                <td>0ms</td>
+                                                                <td>0ms</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -357,23 +307,15 @@
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>
-                                                                                    <a href="feature_rimacprocurador.html">Rimac procurador</a>
+                                                                                    Rimac procurador
                                                                             </td>
-                                                                            <td>5</td>
+                                                                            <td>0</td>
                                                                             <td>0%</td>
                                                                             <td>
-                                                                                    <i class='far fa-stop-circle pending-icon ' title='PENDING'></i>
+                                                                                    <i class="fa fa-stop-circle-o pending-icon"></i>
                                                                             </td>
                                                                             <td>
                                                                                 <div class="progress">
-                                                                                        <div class="progress-bar"
-                                                                                             role="progressbar"
-                                                                                             style="width: 100%; background-color: #A2C4EC"
-                                                                                             aria-valuenow="5"
-                                                                                             title="100% pending"
-                                                                                             aria-valuemin="0"
-                                                                                             aria-valuemax="100">
-                                                                                        </div>
                                                                                 </div>
                                                                             </td>
                                                                         </tr>
@@ -383,38 +325,6 @@
                                                 </div>
 
 
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <h3>Tags</h3>
-
-                                                        <div class="card">
-                                                            <div class="card-body">
-                                                                <div>
-                                                                    <a href="tag_contactarcliente.html">
-                                                                        <span class="badge"
-                                                                              style="background-color:#6884A6; margin:1em;padding:4px;"><i
-                                                                                class="fa fa-tag"></i> Contactarcliente&nbsp;&nbsp;&nbsp;3</span>
-                                                                    </a>
-                                                                    <a href="tag_tag.html">
-                                                                        <span class="badge"
-                                                                              style="background-color:#6884A6; margin:1em;padding:4px;"><i
-                                                                                class="fa fa-tag"></i> Tag&nbsp;&nbsp;&nbsp;5</span>
-                                                                    </a>
-                                                                    <a href="tag_test.html">
-                                                                        <span class="badge"
-                                                                              style="background-color:#6884A6; margin:1em;padding:4px;"><i
-                                                                                class="fa fa-tag"></i> Test&nbsp;&nbsp;&nbsp;3</span>
-                                                                    </a>
-                                                                    <a href="tag_finalizaratencion.html">
-                                                                        <span class="badge"
-                                                                              style="background-color:#6884A6; margin:1em;padding:4px;"><i
-                                                                                class="fa fa-tag"></i> Finalizaratencion&nbsp;&nbsp;&nbsp;2</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div id="tests" class="tab-pane fade">
@@ -423,48 +333,7 @@
                                                     <div class="col-sm-12">
                                                         <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            <table class="scenario-result-table table" id="scenario-results">
-                                                <thead>
-                                                <tr>
-                                                    <th>feature</th>
-                                                    <th class="test-name-column">Scenario</th>
-                                                    <th>Steps</th>
-                                                    <th>Start Time</th>
-                                                    <th>Duration</th>
-                                                    <th>Result</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="feature_features_sl_rimacprocurador.html">RimacProcurador</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="rimacprocurador_contactar_cliente.html">Contactar cliente</a>
-                                                                   (3 examples)
-                                                    </td>
-                                                    <td>8</td>
-                                                    <td>00:42:53</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="feature_features_sl_rimacprocurador.html">RimacProcurador</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="rimacprocurador_finalizar_atencion.html">Finalizar Atencion</a>
-                                                                   (2 examples)
-                                                    </td>
-                                                    <td>10</td>
-                                                    <td>00:42:53</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                            No automated tests were executed
 
                                                     </div>
                                                 </div>

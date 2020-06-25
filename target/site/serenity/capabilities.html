@@ -103,7 +103,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"RimacProcurador","type":"feature","href":"feature_rimacprocurador.html","nodes":[],"selectable":false,"tags":["\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"RimacProcurador","type":"feature","href":"feature_rimacprocurador.html","nodes":[],"selectable":false,"tags":["\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e",""]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -167,7 +167,7 @@
             <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-06-2020 00:42</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -204,150 +204,11 @@
 
                                             <div id="toc">
                                                 <table class="table" id="toc-table">
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#5708a1d141bd7ba9385ab708bc029584a6b7ef0c79043e40bb7d2c51c5ec920b" title="View scenario details" >Contactar cliente</a>
-                                                                     (3 examples)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="rimacprocurador_contactar_cliente.html"
-                                                                               title="View test results">
-                                                                            <i class='far fa-stop-circle pending-icon ' title='PENDING'></i>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="rimacprocurador_contactar_cliente.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#3e54feb70022f5060f26c733581eadc7a58eb49cb043ace70b99ccb77ff9e699" title="View scenario details" >Finalizar Atencion</a>
-                                                                     (2 examples)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="rimacprocurador_finalizar_atencion.html"
-                                                                               title="View test results">
-                                                                            <i class='far fa-stop-circle pending-icon ' title='PENDING'></i>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="rimacprocurador_finalizar_atencion.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
                                                 </table>
 
                                             </div>
 
                                             <h3>Scenario details</h3>
-
-
-                                                <div class="scenario-docs card" id="5708a1d141bd7ba9385ab708bc029584a6b7ef0c79043e40bb7d2c51c5ec920b">
-                                                    <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="rimacprocurador_contactar_cliente.html" title="View test results">Contactar cliente</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <i class='far fa-stop-circle pending-icon ' title='PENDING'></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p>Given accedo al sistema Rimac Procurador con ubicacion &quot;{ubicacion}&quot; cerca al cliente</p>
-                                                            <p>When ingreso usuario &quot;{usuario}&quot; y password &quot;{password}&quot;</p>
-                                                            <p>And selecciono opcion Ingresar</p>
-                                                            <p>And selecciono opcion Ver Mapa</p>
-                                                            <p>And ingreso el ultimo digito de la placa &quot;{placa}&quot;</p>
-                                                            <p>And selecciono opcion Confirmar</p>
-                                                            <p>And selecciono Aceptar</p>
-                                                            <p>Then se debe mostrar mensaje &quot;{mensaje}&quot; satisfactorio</p>
-                                                        <div class="examples">
-                                                            <p><div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>0</th><th>ubicaci�n</th><th>usuario</th><th>password</th><th>placa</th><th>mensaje</th></tr>
-</thead>
-<tbody>
-<tr><td>1</td><td>-12.0965159, -77.0278309</td><td>procuradorautoapp1@gmail.com</td><td>Test2020#</td><td>ABA417</td><td>El proceso termin� correctamente.</td></tr>
-<tr><td>2</td><td>-12.1691665, -77.0001753</td><td>procuradorautoapp2@gmail.com</td><td>Test2020#</td><td>ABA418</td><td>El proceso termin� correctamente.</td></tr>
-<tr><td>3</td><td>-12.1110620, -77.0315913</td><td>procuradorautoapp3@gmail.com</td><td>Test2020#</td><td>ABA419</td><td>El proceso termin� correctamente.</td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="scenario-docs card" id="3e54feb70022f5060f26c733581eadc7a58eb49cb043ace70b99ccb77ff9e699">
-                                                    <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="rimacprocurador_finalizar_atencion.html" title="View test results">Finalizar Atencion</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <i class='far fa-stop-circle pending-icon ' title='PENDING'></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p>Given accedo al sistema Rimac Procurador con ubicacion &quot;{ubicacion}&quot; cerca al cliente</p>
-                                                            <p>When ingreso usuario &quot;{usuario}&quot; y password &quot;{password}&quot;</p>
-                                                            <p>And selecciono opcion Ingresar</p>
-                                                            <p>And selecciono opcion Ver Mapa</p>
-                                                            <p>And ingreso el ultimo digito de la placa &quot;{placa}&quot;</p>
-                                                            <p>And selecciono opcion Confirmar</p>
-                                                            <p>And selecciono Aceptar</p>
-                                                            <p>And selecciono tipo de atencion &quot;{tipo atencion}&quot; y tipo de siniestro &quot;{tipo siniestro}&quot;</p>
-                                                            <p>And selecciono finalizar atencion</p>
-                                                            <p>Then se debe mostrar la pagina principal</p>
-                                                        <div class="examples">
-                                                            <p><div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>0</th><th>ubicacion</th><th>usuario</th><th>password</th><th>placa</th><th>tipo atencion</th><th>tipo siniestro</th><th>mensaje</th></tr>
-</thead>
-<tbody>
-<tr><td>1</td><td>-12.1691665, -77.0001753</td><td>procuradorautoapp1@gmail.com</td><td>Test2020#</td><td>ABA435</td><td>Denuncia Policial</td><td>Choque</td><td>El proceso termin� correctamente.</td></tr>
-<tr><td>2</td><td>-12.1691665, -77.0001753</td><td>procuradorautoapp2@gmail.com</td><td>Test2020#</td><td>ABA436</td><td>Constataci�n de da�os</td><td>NA</td><td>El proceso termin� correctamente.</td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -356,41 +217,7 @@
                             <div id="results" class="tab-pane fade">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-4">
-
-                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
-                                                <div class="ct-chart ct-square"></div>
-                                            </div>
-                                            <script>
-
-                                                var labels = [' ', ' ', '100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-                                                // Our series array that contains series objects or in this case series data arrays
-
-                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 5}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
-
-                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                // as you saw in the previous example
-                                                var options = {
-                                                    width: 350,
-                                                    height: 300
-                                                };
-
-                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                    new Chartist.Pie('.ct-chart', {
-                                                        series: series,
-                                                        labels: labels,
-                                                    }, {
-                                                        donut: true,
-                                                        donutWidth: 60,
-                                                        donutSolid: true,
-                                                        startAngle: 270,
-                                                        showLabel: true
-                                                    }, options);
-                                                });
-
-                                            </script>
-                                        </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
 
                                         <table class="table">
                                             <thead>
@@ -410,12 +237,11 @@
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                    <td class="aggregate-result-count">
-                                                                        <a href="result_pending.html"><i
-                                                                                class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending</a>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
                                                                     </td>
-                                                <td class="automated-stats">5</td>
-                                                <td class="automated-stats">100%</td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -462,7 +288,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">5</td>
+                                                <td class="automated-stats">0</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -484,11 +310,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>282ms</td>
-                                                        <td>236ms</td>
-                                                        <td>50ms</td>
-                                                        <td>232ms</td>
-                                                        <td>141ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -527,7 +353,7 @@
             <td> 
                 
             </td>
-            <td>5</td>
+            <td>0</td>
             <td>0</td>
             <td>
                 <span class="status_icon"><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></span>
@@ -548,91 +374,91 @@
                      style="width: 0%; background-color:#30cb23;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 100%; background-color:#A2C4EC;"
-                     aria-valuenow="5"
+                     style="width: 0%; background-color:#A2C4EC;"
+                     aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:darkgrey;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#EEE098;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#f8001f;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:darkorange;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:fuchsia;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="5"
-                     title="  - Total tests: 5
+                     aria-valuemax="0"
+                     title="  - Total tests: 0
   - Passing tests: 0 (0%)
   - Failing tests: 0 (0%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
-  - Pending tests: 5 (100%)
+  - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
             </div>
@@ -654,45 +480,7 @@
                                             <div class="col-sm-12">
                                                 <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            <table class="scenario-result-table table" id="scenario-results">
-                                                <thead>
-                                                <tr>
-                                                    <th class="test-name-column">Scenario</th>
-                                                    <th>Steps</th>
-                                                    <th>Start Time</th>
-                                                    <th>Duration</th>
-                                                    <th>Result</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="rimacprocurador_contactar_cliente.html">Contactar cliente</a>
-                                                               (3 examples)
-                                                    </td>
-                                                    <td>8</td>
-                                                    <td>00:42:53</td>
-                                                    <td>00:00</td>
-                                                    <td>
-                                                            <i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                                style="display:none">PENDING</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="rimacprocurador_finalizar_atencion.html">Finalizar Atencion</a>
-                                                               (2 examples)
-                                                    </td>
-                                                    <td>10</td>
-                                                    <td>00:42:53</td>
-                                                    <td>00:00</td>
-                                                    <td>
-                                                            <i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                                style="display:none">PENDING</span>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                            No automated tests were executed
 
                                             </div>
                                         </div>
