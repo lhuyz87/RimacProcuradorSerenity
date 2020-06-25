@@ -25,7 +25,7 @@ pipeline {
         	steps {
         		script {
         			try {
-        				bat ("mvn verify package -P Rimac")
+        				//bat ("mvn verify package -P Rimac")
         				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue test\"")
         				//bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' \"")
         				bat ("mvn serenity:aggregate")
@@ -50,7 +50,7 @@ pipeline {
                     	//publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}/target/site/serenity", reportFiles: 'index2.html', reportName: 'Evidencia', reportTitles: 'EvidenciaPruebas'])
                     	//publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: "${WORKSPACE}/target/site/serenity${defTimestamp}", reportFiles: 'index.html', reportName: 'Evidencias de Prueba', reportTitles: ''])
                     	//publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: "${WORKSPACE}\\target\\site\\serenity${defTimestamp}", reportFiles: 'index.html', reportName: 'Evidencias de Prueba', reportTitles: ''])
-                        echo 'Reporte realizado con exito'
+                        //echo 'Reporte realizado con exito'
                     }
                     catch (ex) {
                         echo 'Reporte realizado con Fallos'

@@ -37,10 +37,10 @@ public class ExcelUtilPropio extends ExcelUtil {
 			String[] excelSplit = excel.split("\\|");
 			// int v = Integer.parseInt(vez);
 
-//			System.out.println(" valor 1: " + excelSplit[0] + " valor 2: " + excelSplit[1] + " LONGITUD: " + excelSplit.length  );
+			System.out.println(" valor 1: " + excelSplit[0] + " valor 2: " + excelSplit[1] + " LONGITUD: " + excelSplit.length  );
 
 			switch (excelSplit[0]) {
-			case Variables.archivoDP:
+			case "DataPruebaMobile":
 				
 				data = LeedDataDriven.getInstancia().leerDD(hoja);
 				

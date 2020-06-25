@@ -73,7 +73,7 @@ public class Constantes {
 	private static final String res = "src/test/resources/dataDriven/";
 	public static final String rutaPlantillas = res + "0_plantillas/";
 //	public static final String ruta = res + System.getProperty("user.name") + "/";
-	public static final String ruta = res + "dataPool" + "/";
+//	public static final String ruta = res + "dataPool" + "/";
 	// features
 	public static final String featRuta = "src/test/resources/features/";
 	public static final String featLlave = "###DATOS###@";

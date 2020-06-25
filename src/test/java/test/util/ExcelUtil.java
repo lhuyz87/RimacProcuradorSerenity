@@ -67,25 +67,25 @@ public class ExcelUtil {
 	
 	}
 
-	public void copiarPlantillas() {
-		System.out.println("Entrando a Copiar Plantilla...");
-		File file = new File(Constantes.rutaPlantillas);
-		String[] archivos = file.list();
-
-		// verificar si existe directorio
-		File rutaDestino = new File(Constantes.ruta);
-
-		if (!rutaDestino.exists()) {
-			System.out.println("creando directorio local para los data driven");
-			rutaDestino.mkdir();
-		}
-
-		for (int i = 0; i < archivos.length; i++) {
-			System.out.println(archivos[i]);
-			copiarArchivo(archivos[i], Constantes.rutaPlantillas, Constantes.ruta);
-		
-		}
-	}
+//	public void copiarPlantillas() {
+//		System.out.println("Entrando a Copiar Plantilla...");
+//		File file = new File(Constantes.rutaPlantillas);
+//		String[] archivos = file.list();
+//
+//		// verificar si existe directorio
+//		File rutaDestino = new File(Constantes.ruta);
+//
+//		if (!rutaDestino.exists()) {
+//			System.out.println("creando directorio local para los data driven");
+//			rutaDestino.mkdir();
+//		}
+//
+//		for (int i = 0; i < archivos.length; i++) {
+//			System.out.println(archivos[i]);
+//			copiarArchivo(archivos[i], Constantes.rutaPlantillas, Constantes.ruta);
+//		
+//		}
+//	}
 
 	private void copiarArchivo(String archivo, String rutaOrigen, String rutaDestino) {
 		Path origenPath = FileSystems.getDefault().getPath(rutaOrigen + archivo);
