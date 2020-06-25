@@ -28,7 +28,6 @@ pipeline {
         				//bat ("mvn verify package -P Rimac")
         				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue test\"")
         				//bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' \"")
-        				bat ("mvn serenity:aggregate")
         				echo 'Ejecucion de pruebas sin errores...'
         			}
         			catch (ex) {
@@ -45,7 +44,7 @@ pipeline {
                     try {
                     	//sh ("echo ${WORKSPACE}")
                     	//bat ("echo ${defTimestamp}")
-                    
+                  		  bat ("mvn serenity:aggregate")
                     
                     	//publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}/target/site/serenity", reportFiles: 'index2.html', reportName: 'Evidencia', reportTitles: 'EvidenciaPruebas'])
                     	//publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: "${WORKSPACE}/target/site/serenity${defTimestamp}", reportFiles: 'index.html', reportName: 'Evidencias de Prueba', reportTitles: ''])
