@@ -2,6 +2,7 @@ package test.util;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import jcifs.smb.NtlmPasswordAuthentication;
+import jcifs.smb.SmbFile;
+
 import org.apache.poi.ss.usermodel.Sheet;
 import test.util.ExcelUtilPropio;
 import test.util.Variables;
@@ -51,10 +56,29 @@ public class LeedDataDriven implements Inout {
 		String usar = "";
 		String res = "";
 		System.out.println("HOJAS " + hoja);
-		File file = new File(Variables.file_01);
+		//Se comenta  para usar file remoto
+//		File file = new File(Variables.file_01);
+		
+		//Codigo para manejo de archivo remoto
+    	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(Variables.dominioDP, Variables.usuarioDP, Variables.passwordDP);
+    	SmbFile dir=null;
+    	System.out.println("*********** " + Variables.file_remota);
+    	try {
+			dir = new SmbFile(Variables.file_remota, auth);
+		} catch (MalformedURLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+    	File file = new File(dir.getUncPath());
+    	System.out.println("*********** " + file);
+    	System.out.println("*********** " + file.getAbsolutePath());
+    	
+		
+		
 
 		if (file.isFile()) {
-			FileInputStream fileInputStream = new FileInputStream(file);
+			FileInputStream fileInputStream = new FileInputStream(file.getAbsoluteFile());
 			Workbook workbook = WorkbookFactory.create(fileInputStream);
 			Sheet sheet = !hoja.isEmpty() ? workbook.getSheet(hoja) : workbook.getSheetAt(0);
 			int ultimaFilaAfectada = sheet.getLastRowNum();

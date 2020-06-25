@@ -8,6 +8,8 @@ import jcifs.smb.NtlmPasswordAuthentication;
 import jcifs.smb.SmbException;
 import jcifs.smb.SmbFile;
 import test.util.PageObjectUtil;
+import test.util.Variables;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -41,13 +43,13 @@ public class LoginPage  extends PageObject{
     	coordenada[0] = coordenada[0].trim();
     	coordenada[1] = coordenada[1].trim();
 //    	File appDir = new File("src/test/resources/apps/app-release.apk");
-    	String rutaApk = "smb://lap-jenkins/apps/app-release.apk";
-    	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication("lap-jenkins", "administrador", "Lhuyz666");
+    	
+    	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(Variables.dominio, Variables.usuario, Variables.password);
     	SmbFile dir=null;
     	
 		
     	try {
-			dir = new SmbFile(rutaApk, auth);
+			dir = new SmbFile(Variables.rutaApk, auth);
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

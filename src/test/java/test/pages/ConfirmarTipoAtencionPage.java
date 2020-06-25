@@ -80,7 +80,7 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	
     	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"PantallaPrincipalFinalizado");
     	System.out.println("CASO TERMINADO");
-    	pageObjectUtil.sleep(5);
+    	pageObjectUtil.sleep(10);
     	driver2.quit();
     }
 
