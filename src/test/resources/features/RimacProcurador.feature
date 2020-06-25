@@ -13,7 +13,7 @@ Feature: RimacProcurador
     And selecciono Aceptar
     Then se debe mostrar mensaje "<mensaje>" satisfactorio
 
-    ###DATOS###@DataPrueba|1@01-ContactarCliente
+    ###DATOS###@DataPruebaMobile|1@01-ContactarCliente
     Examples: 
       |0|ubicación|usuario|password|placa|mensaje|
       |1|-12.0965159, -77.0278309|procuradorautoapp1@gmail.com|Test2020#|ABA417|El proceso terminó correctamente.|
@@ -33,7 +33,7 @@ Feature: RimacProcurador
     And selecciono finalizar atencion
     Then se debe mostrar la pagina principal
 
-    ###DATOS###@DataPrueba|1@02-FinalizarAtencion
+    ###DATOS###@DataPruebaMobile|1@02-FinalizarAtencion
     Examples: 
       |0|ubicacion|usuario|password|placa|tipo atencion|tipo siniestro|mensaje|
       |1|-12.1691665, -77.0001753|procuradorautoapp1@gmail.com|Test2020#|ABA435|Denuncia Policial|Choque|El proceso terminó correctamente.|
