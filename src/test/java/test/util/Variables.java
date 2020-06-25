@@ -2,6 +2,9 @@ package test.util;
 
 public class Variables {
 
+	
+	//NombreArchivoDP
+	public static final String archivoDP= "DataPruebaMobile";
 	// CB
 	public static final String cbUser = "";
 	public static final String cbPass = "";
@@ -11,12 +14,14 @@ public class Variables {
 //	private static final String ruta = res + System.getProperty("user.name") + "/";
 	private static final String ruta = res + "dataPool" + "/";
 	// vida ley activos
-	public static final String file_01 = ruta + "DataPrueba.xlsx";
+	public static final String file_01 = ruta + archivoDP.concat(".xlsx");
 	public static final String h01 = "01-RegistrarAtencion";
+	
+	
 	
 	//Ruta remota data
 	private static final String RutaRemota = "smb://lap-reta/DataPool/RimacProcurador/";
-	public static final String file_remota = RutaRemota + "DataPruebaMobile.xlsx";
+	public static final String file_remota = RutaRemota + archivoDP.concat(".xlsx");
 	
 	
 	//ruta retota APK
