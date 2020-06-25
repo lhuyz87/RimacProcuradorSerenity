@@ -33,9 +33,9 @@ public class Variables {
 	public static final String usuario = "administrador"; 
 	public static final String password = "Lhuyz666"; 
 	
-	public static final String dominioDP ="lap-jenkins"; 
-	public static final String usuarioDP = "administrador"; 
-	public static final String passwordDP = "Lhuyz666"; 
+	public static final String dominioDP ="lap-reta"; 
+	public static final String usuarioDP = "RimacJenkins"; 
+	public static final String passwordDP = "Rimac2020."; 
 	
 	
 }
