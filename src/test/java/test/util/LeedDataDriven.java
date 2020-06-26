@@ -73,15 +73,15 @@ public class LeedDataDriven implements Inout {
 			e1.printStackTrace();
 		}
     	
-	  	try {
-			for (SmbFile f : ruta.listFiles())
-			{
-			    System.out.println("NAME " +f.getName());
-			}
-		} catch (SmbException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//	  	try {
+//			for (SmbFile f : ruta.listFiles())
+//			{
+//			    System.out.println("NAME " +f.getName());
+//			}
+//		} catch (SmbException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		
     	File file = new File(dir.getUncPath());
     	System.out.println("*********** " + file);
@@ -91,7 +91,7 @@ public class LeedDataDriven implements Inout {
 		
 
 		if (file.isFile()) {
-			FileInputStream fileInputStream = new FileInputStream(file);
+			FileInputStream fileInputStream = new FileInputStream(file.getAbsoluteFile());
 			Workbook workbook = WorkbookFactory.create(fileInputStream);
 			Sheet sheet = !hoja.isEmpty() ? workbook.getSheet(hoja) : workbook.getSheetAt(0);
 			int ultimaFilaAfectada = sheet.getLastRowNum();

@@ -20,7 +20,7 @@ public class Variables {
 	
 	
 	//Ruta remota data
-	public static final String RutaRemota = "smb://192.168.1.13/DataPool/RimacProcurador/";
+	public static final String RutaRemota = "smb://lap-reta/DataPool/RimacProcurador/";
 	public static final String file_remota = RutaRemota + archivoDP.concat(".xlsx");
 	
 	
@@ -33,7 +33,7 @@ public class Variables {
 	public static final String usuario = "administrador"; 
 	public static final String password = "Lhuyz666"; 
 	
-	public static final String dominioDP ="192.168.1.13"; 
+	public static final String dominioDP ="lap-reta"; 
 	public static final String usuarioDP = "RimacJenkins"; 
 	public static final String passwordDP = "Rimac2020."; 
 	
