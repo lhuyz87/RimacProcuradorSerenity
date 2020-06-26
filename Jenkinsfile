@@ -42,7 +42,7 @@ pipeline {
         	steps {
         		script {
                     try {
-                    	//sh ("echo ${WORKSPACE}")
+                    	  bat ("echo ${WORKSPACE}")
                     	  bat ("echo ${defTimestamp}")
                   		  bat ("mvn serenity:aggregate")
                     
