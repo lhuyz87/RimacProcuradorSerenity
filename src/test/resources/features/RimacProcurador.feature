@@ -38,6 +38,3 @@ Feature: RimacProcurador
       |0|ubicacion|usuario|password|placa|tipo atencion|tipo siniestro|mensaje|
       |1|-12.0965159, -77.0278309|procuradorautoapp1@gmail.com|Test2020#|ABA517|Denuncia Policial|Choque|El proceso terminó correctamente.|
       |2|-12.1691665, -77.0001753|procuradorautoapp2@gmail.com|Test2020#|ABA518|Constatación de daños|NA|El proceso terminó correctamente.|
-      |3|-12.1110620, -77.0315913|procuradorautoapp3@gmail.com|Test2020#|ABA519|Speed|Choque|El proceso terminó correctamente.|
-      |4|-12.0965159, -77.0278309|procuradorautoapp4@gmail.com|Test2020#|ABA520|Speed|Robo parcial|El proceso terminó correctamente.|
-      |5|-12.1692327, -77.0002525|procuradorautoapp5@gmail.com|Test2020#|ABA521|Denuncia Policial|Choque|El proceso terminó correctamente.|

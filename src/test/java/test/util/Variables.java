@@ -26,6 +26,7 @@ public class Variables {
 	
 	//ruta retota APK
 	public static final String rutaApk = "smb://lap-jenkins/apps/app-release.apk";
+	public static final String testrutaApk = "smb://lap-jenkins/apps/";
 	
 	//credenciales
 	

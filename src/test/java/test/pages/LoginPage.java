@@ -46,24 +46,25 @@ public class LoginPage  extends PageObject{
     	
     	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(Variables.dominio, Variables.usuario, Variables.password);
     	SmbFile dir=null;
-    	
+    	SmbFile dirtest=null;
 		
     	try {
 			dir = new SmbFile(Variables.rutaApk, auth);
+			dirtest = new SmbFile(Variables.testrutaApk, auth);
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
   
-//	  	try {
-//			for (SmbFile f : dir.listFiles())
-//			{
-//			    System.out.println(f.getName());
-//			}
-//		} catch (SmbException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
+	  	try {
+			for (SmbFile f : dirtest.listFiles())
+			{
+			    System.out.println(f.getName());
+			}
+		} catch (SmbException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
     	
     	File resulta = new File(dir.getUncPath());
     	
@@ -95,7 +96,7 @@ public class LoginPage  extends PageObject{
 		
 
 		
-		URL url = new URL("http://192.168.1.13:4723/wd/hub");
+		URL url = new URL("http://192.168.1.10:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
 		
 //		driver = new AppiumDriver<MobileElement>(url, caps);
