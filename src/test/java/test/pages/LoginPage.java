@@ -105,9 +105,7 @@ public class LoginPage  extends PageObject{
     }
     
 	protected WebDriverWait getWDW() {
-		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
-			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
 			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
 		}
 
