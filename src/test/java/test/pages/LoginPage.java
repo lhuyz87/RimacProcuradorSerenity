@@ -65,7 +65,7 @@ public class LoginPage  extends PageObject{
 
 		caps.setCapability("usePrebuiltWDA", true);
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
