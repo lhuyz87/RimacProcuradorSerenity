@@ -7,7 +7,7 @@ import cucumber.api.CucumberOptions;
 
 
 @RunWith(RunPersonalizar.class)
-@CucumberOptions(features = { "src/test/resources/features" },  tags = {"@FinalizarAtencion"}, glue = { "test" })
+//@CucumberOptions(features = { "src/test/resources/features" },  tags = {"@FinalizarAtencion"}, glue = { "test" })
 
 
 public class RunRimac 
