@@ -114,7 +114,7 @@ public class LoginPage  extends PageObject{
     
     public void ingresarCredenciales(String usuario, String password) {
 		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtUsuario,usuario,null);
-		pageObjectUtil.sleep(5);
+		pageObjectUtil.sleep(3);
 		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtpassword,password,null);
    }
     
