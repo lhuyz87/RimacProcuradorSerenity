@@ -42,6 +42,7 @@ pipeline {
         	steps {
         		script {
                      try {
+                     	bat ("mvn serenity:aggregate")
                     	//bat ("echo ${WORKSPACE}")
                     	bat ("echo ${defTimestamp}")
                     	publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}/target/site/serenity", reportFiles: 'index.html', reportName: 'Evidencias de Prueba', reportTitles: 'Reporte de Pruebas'])
