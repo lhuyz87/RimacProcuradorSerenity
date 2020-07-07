@@ -25,10 +25,10 @@ pipeline {
         	steps {
         		script {
         			try {
-        				//bat ("mvn verify package -P Rimac")
+        				//bat ("mvn verify package -P test")
         				bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue test\"")
-        				//bat ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' \"")
-        				echo 'Ejecucion de pruebas sin errores...'
+ 						bat ("mvn serenity:aggregate")	     				
+ 						echo 'Ejecucion de pruebas sin errores...'
         			}
         			catch (ex) {
         				echo 'Finalizo ejecucion con fallos...'
@@ -42,7 +42,6 @@ pipeline {
         	steps {
         		script {
                      try {
-                     	bat ("mvn serenity:aggregate")
                     	//bat ("echo ${WORKSPACE}")
                     	bat ("echo ${defTimestamp}")
                     	publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}/target/site/serenity", reportFiles: 'index.html', reportName: 'Evidencias de Prueba', reportTitles: 'Reporte de Pruebas'])
