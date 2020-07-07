@@ -66,7 +66,7 @@ public class LoginPage  extends PageObject{
 		caps.setCapability("usePrebuiltWDA", true);
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "ANDROID N-32");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
@@ -79,7 +79,7 @@ public class LoginPage  extends PageObject{
 		System.out.println(" URL");
 		
 //		URL url = new URL("http://172.26.40.137:4723/wd/hub");
-		URL url = new URL("http://192.168.1.4:4723/wd/hub");
+		URL url = new URL("http://192.168.1.6:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
 		
 //		driver = new AppiumDriver<MobileElement>(url, caps);
