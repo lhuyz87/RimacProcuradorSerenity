@@ -25,7 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import test.xpath.XpathLogin;
 import net.serenitybdd.core.pages.*;
 
-public class LoginPage  extends PageObject{
+public class LoginPage3  extends PageObject{
 	
 //	public static AndroidDriver driver2;
 	private WebDriverWait wdw = null;
@@ -42,10 +42,12 @@ public class LoginPage  extends PageObject{
     	String coordenada[] = ubicacion.split(",");
     	coordenada[0] = coordenada[0].trim();
     	coordenada[1] = coordenada[1].trim();
+//    	File appDir = new File("src/test/resources/apps/app-release.apk");
     	
     	NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(Variables.dominio, Variables.usuario, Variables.password);
     	SmbFile dir=null;
     	SmbFile dirtest=null;
+		
     	try {
 			dir = new SmbFile(Variables.rutaApk, auth);
 			dirtest = new SmbFile(Variables.testrutaApk, auth);
@@ -54,19 +56,33 @@ public class LoginPage  extends PageObject{
 			e1.printStackTrace();
 		}
   
-
+	  	try {
+			for (SmbFile f : dirtest.listFiles())
+			{
+			    System.out.println(f.getName());
+			}
+		} catch (SmbException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
     	File resulta = new File(dir.getUncPath());
     	
     	System.out.println("***" + resulta.getAbsolutePath());
+//    	System.out.println(appDir.getAbsolutePath());
+    
+    	
+    	
+//		\\lap-jenkins\apps
     	
    	try {
-		System.out.println("Inicia la construccion");
+			System.out.println("Inicia la construccion");
 		DesiredCapabilities caps = new DesiredCapabilities();
 
 		caps.setCapability("usePrebuiltWDA", true);
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "ANDROID N-32");
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
@@ -78,8 +94,9 @@ public class LoginPage  extends PageObject{
 		
 		System.out.println(" URL");
 		
-//		URL url = new URL("http://172.26.40.137:4723/wd/hub");
-		URL url = new URL("http://192.168.1.4:4723/wd/hub");
+
+		
+		URL url = new URL("http://192.168.1.10:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
 		
 //		driver = new AppiumDriver<MobileElement>(url, caps);
@@ -115,10 +132,13 @@ public class LoginPage  extends PageObject{
 	}
     
     public void ingresarCredenciales(String usuario, String password) {
+    	
+
 		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtUsuario,usuario,null);
-		pageObjectUtil.sleep(5);
 		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtpassword,password,null);
-   }
+	
+    	
+    }
     
     public void seleccionarIngresar() {
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathLogin.btnIngresar);

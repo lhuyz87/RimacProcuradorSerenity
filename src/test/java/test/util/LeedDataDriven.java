@@ -72,16 +72,16 @@ public class LeedDataDriven implements Inout {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-    	
-	  	try {
-			for (SmbFile f : ruta.listFiles())
-			{
-			    System.out.println("NAME " +f.getName());
-			}
-		} catch (SmbException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//    	
+//	  	try {
+//			for (SmbFile f : ruta.listFiles())
+//			{
+//			    System.out.println("NAME " +f.getName());
+//			}
+//		} catch (SmbException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		
     	File file = new File(dir.getUncPath());
     	System.out.println("*********** " + file);

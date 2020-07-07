@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="RimacProcurador" skipped="0" tests="2" time="9.58" timestamp="2020-06-26 10:47:27"><testcase name="Finalizar Atencion"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="4" failures="0" name="RimacProcurador" skipped="0" tests="4" time="3.14" timestamp="2020-07-02 05:57:05"><testcase name="Finalizar Atencion"><error type="java.lang.NullPointerException"/><system-err>null&#13;
 test.pages.LoginPage.getWDW(LoginPage.java:128)&#13;
 test.pages.LoginPage.ingresarCredenciales(LoginPage.java:137)&#13;
 test.steps.LoguinSteps.ingresarCrendeciales(LoguinSteps.java:35)&#13;

@@ -69,7 +69,7 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	pageObjectUtil.sleep(2);
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnFinalizarAtencion);
     	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"FinalizarAtencion");
-    	pageObjectUtil.sleep(2);
+    	pageObjectUtil.sleep(4);
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnAceptar);
     	
     	
@@ -80,7 +80,13 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	
     	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"PantallaPrincipalFinalizado");
     	System.out.println("CASO TERMINADO");
-    	pageObjectUtil.sleep(10);
+    	pageObjectUtil.sleep(15);
+    	try {
+			driver2.wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	driver2.quit();
     }
 
