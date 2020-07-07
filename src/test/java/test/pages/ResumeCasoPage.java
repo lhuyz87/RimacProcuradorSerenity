@@ -21,7 +21,7 @@ public class ResumeCasoPage extends LoginPage {
 		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
 			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
-			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
+			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 
 		return wdw;
@@ -29,7 +29,7 @@ public class ResumeCasoPage extends LoginPage {
    
     public void selConfirmarTipoAtencion() {
     	pageObjectUtil.sleep(4);
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathResumenCaso.btnConfirmarAtencion);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathResumenCaso.btnConfirmarAtencion);
     	Serenity.takeScreenshot();
     }
 }

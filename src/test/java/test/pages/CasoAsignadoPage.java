@@ -21,7 +21,7 @@ public class CasoAsignadoPage extends LoginPage {
 		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
 			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
-			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
+			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 
 		return wdw;
@@ -29,7 +29,7 @@ public class CasoAsignadoPage extends LoginPage {
    
     public void seleccionarVerMapa() {
     	pageObjectUtil.sleep(5);
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathAsignacionCaso.btnVerMapa);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"VerMapa");
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathAsignacionCaso.btnVerMapa);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"VerMapa");
     }
 }

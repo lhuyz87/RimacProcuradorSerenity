@@ -22,7 +22,7 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
 		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
 			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
-			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
+			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 
 		return wdw;
@@ -32,33 +32,33 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	
     	System.out.println("tipoAtencion  " +tipoAtencion + "tipoSiniestro   " +tipoSiniestro );
     	pageObjectUtil.sleep(4);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"Confirmar Atencion");
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathResumenCaso.btnConfirmarAtencion);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"Confirmar Atencion");
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathResumenCaso.btnConfirmarAtencion);
     	pageObjectUtil.sleep(2);
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.lstTipoAtencion);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.lstTipoAtencion);
     	pageObjectUtil.sleep(2);
 
     	
     	if(tipoAtencion.compareTo("Speed")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcSpeed);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.opcSpeed);
     	if(tipoAtencion.compareTo("Denuncia Policial")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcDenunciaPolicial);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.opcDenunciaPolicial);
     	if(tipoAtencion.contains("Cons")==true)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcConsDanos);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.opcConsDanos);
     	if(tipoAtencion.compareTo("Desistimiento")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcDesistimiento);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.opcDesistimiento);
     	pageObjectUtil.sleep(2);
     	
     	
     	if(tipoSiniestro.compareTo("Choque")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkChoque);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.chkChoque);
     	if(tipoSiniestro.compareTo("Robo parcial")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkRoboPacial);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.chkRoboPacial);
     	if(tipoSiniestro.compareTo("Robo total")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkRoboTotal);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.chkRoboTotal);
     	if(tipoSiniestro.compareTo("Otros")==0)
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkOtros);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"TipoAtencion-Ocurrencia");
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.chkOtros);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"TipoAtencion-Ocurrencia");
     	pageObjectUtil.sleep(2);
 
     	
@@ -67,10 +67,10 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     
     public void seleConfirmarAtencion() {
     	pageObjectUtil.sleep(2);
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnFinalizarAtencion);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"FinalizarAtencion");
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.btnFinalizarAtencion);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"FinalizarAtencion");
     	pageObjectUtil.sleep(4);
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnAceptar);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathDetalleTipoAtencion.btnAceptar);
     	
     	
     
@@ -78,16 +78,16 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
 
     public void validarFinalizarCaso() {
     	
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"PantallaPrincipalFinalizado");
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"PantallaPrincipalFinalizado");
     	System.out.println("CASO TERMINADO");
     	pageObjectUtil.sleep(10);
     	try {
-			driver2.wait();
+			driver.wait();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	driver2.quit();
+    	driver.quit();
     }
 
 }

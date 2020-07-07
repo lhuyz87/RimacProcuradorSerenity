@@ -27,10 +27,10 @@ import net.serenitybdd.core.pages.*;
 
 public class LoginPage  extends PageObject{
 	
-//	public static AndroidDriver driver2;
+//	public static AndroidDriver driver;
 	private WebDriverWait wdw = null;
 	private long wdwTimeOut = 300L;
-	public static AppiumDriver driver2;
+	public static AppiumDriver driver;
 	
 	PageObjectUtil pageObjectUtil = new PageObjectUtil();
 	XpathLogin xpathLogin  = new XpathLogin();
@@ -83,16 +83,16 @@ public class LoginPage  extends PageObject{
 		System.out.println(" INICIA DRIVER");
 		
 //		driver = new AppiumDriver<MobileElement>(url, caps);
-//		driver2= new AndroidDriver(url, caps);
-		driver2=  new AppiumDriver(url, caps);
-		wdw = new WebDriverWait(driver2, 10);
+//		driver= new AndroidDriver(url, caps);
+		driver=  new AppiumDriver(url, caps);
+		wdw = new WebDriverWait(driver, 10);
 		double longitud=Double.parseDouble(coordenada[0]);
 		double latitud=-Double.parseDouble(coordenada[1])*-1;
 		System.out.println(" longitud  " + longitud);
 		System.out.println(" latitud  " + latitud);
 		
 		Location loc = new Location(longitud, latitud, 0);
-		driver2.setLocation(loc);
+		driver.setLocation(loc);
 //		driver.resetApp();
 
 		}catch (Exception e) {
@@ -106,19 +106,19 @@ public class LoginPage  extends PageObject{
     
 	protected WebDriverWait getWDW() {
 		if (wdw == null) {
-			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
+			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 
 		return wdw;
 	}
     
     public void ingresarCredenciales(String usuario, String password) {
-		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtUsuario,usuario,null);
+		pageObjectUtil.seleniumEscribirUntil(driver, getWDW() , xpathLogin.txtUsuario,usuario,null);
 		pageObjectUtil.sleep(3);
-		pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathLogin.txtpassword,password,null);
+		pageObjectUtil.seleniumEscribirUntil(driver, getWDW() , xpathLogin.txtpassword,password,null);
    }
     
     public void seleccionarIngresar() {
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathLogin.btnIngresar);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW() , xpathLogin.btnIngresar);
     }
 }

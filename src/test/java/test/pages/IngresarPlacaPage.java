@@ -23,7 +23,7 @@ public class IngresarPlacaPage extends LoginPage {
 		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
 			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
-			wdw = new WebDriverWait(driver2, wdwTimeOut, 1L);
+			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 
 		return wdw;
@@ -31,28 +31,28 @@ public class IngresarPlacaPage extends LoginPage {
    
     public void ingresarUltimoDigito(String placa) {
     	AuxPlaca=placa;
-    	pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathCompletarPlaca.txtUltimoDigPlaca, placa.substring(5,6),  null);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca,"PlacaIngresada");
+    	pageObjectUtil.seleniumEscribirUntil(driver, getWDW() , xpathCompletarPlaca.txtUltimoDigPlaca, placa.substring(5,6),  null);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca,"PlacaIngresada");
     }
     
     public void seleccionarContactar() {
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW(), xpathCompletarPlaca.btnContactar);
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca, "Contactar");
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW(), xpathCompletarPlaca.btnContactar);
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca, "Contactar");
     }
     
     public void seleccionarAceptar() {
-    	pageObjectUtil.seleniumClickUntil(driver2, getWDW(), xpathCompletarPlaca.btnAceptar);
+    	pageObjectUtil.seleniumClickUntil(driver, getWDW(), xpathCompletarPlaca.btnAceptar);
     }
     
     
     public String validarMensaje(String mensaje) {
     	
     
-    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca, "Contactado");
+    	pageObjectUtil.tomarEvidencia(driver, AuxPlaca, "Contactado");
       	
     	String mensajeObtenido= "El proceso terminó correctamente.";
     	pageObjectUtil.sleep(5);
-    	driver2.quit();
+    	driver.quit();
     	return mensajeObtenido;
     }
 }
