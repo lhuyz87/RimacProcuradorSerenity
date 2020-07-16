@@ -61,21 +61,21 @@ public class LoginPage  extends PageObject{
 		DesiredCapabilities caps = new DesiredCapabilities();
 
 		caps.setCapability("usePrebuiltWDA", true);
-		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
+		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, Variables.platName);
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, Variables.platVersion);
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, Variables.devName);
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
 		caps.setCapability(MobileCapabilityType.APP, resulta.getAbsolutePath());
-		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
-		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
+		caps.setCapability("appPackage",Variables.appPackage);
+		caps.setCapability("appActivity",Variables.appActivity);
 		caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);
 		
 		System.out.println(" URL");
 		
 //		URL url = new URL("http://172.26.40.137:4723/wd/hub");
-		URL url = new URL("http://192.168.1.9:4723/wd/hub");
+		URL url = new URL(Variables.serAppium);
 		System.out.println(" INICIA DRIVER");
 		driver=  new AppiumDriver(url, caps);
 		wdw = new WebDriverWait(driver, 10);
