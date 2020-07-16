@@ -79,7 +79,7 @@ public class LoginPage  extends PageObject{
 		System.out.println(" URL");
 		
 //		URL url = new URL("http://172.26.40.137:4723/wd/hub");
-		URL url = new URL("http://192.168.1.6:4723/wd/hub");
+		URL url = new URL("http://192.168.1.9:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
 		
 //		driver = new AppiumDriver<MobileElement>(url, caps);
