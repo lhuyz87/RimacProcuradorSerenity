@@ -37,7 +37,8 @@ public class Variables {
 	public static final String testrutaApk = "smb://lap-jenkins/apps/";
 	
 	
-
+//	dataeEvidencia
+	public static final String rutaEvidencia = "src/test/resources/evidencia/";
 	
 	
 	//credenciales

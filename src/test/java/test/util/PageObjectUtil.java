@@ -1231,7 +1231,7 @@ public class PageObjectUtil {
 		
 		
 		// verificar si existe directorio
-		String rutaCompleta=Constantes.rutaEvidencia.concat(nombreCarpeta).concat("/");
+		String rutaCompleta=Variables.rutaEvidencia.concat(nombreCarpeta).concat("/");
 		System.out.println(rutaCompleta);
 		File rutaDestino = new File(rutaCompleta);
 //		rutaDestino.mkdir();

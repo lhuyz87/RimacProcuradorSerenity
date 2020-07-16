@@ -80,16 +80,13 @@ public class Constantes {
 
 	
 	//dataeEvidencia
-	public static final String rutaEvidencia = "src/test/resources/evidencia/";
+//	public static final String rutaEvidencia = "src/test/resources/evidencia/";
 
 	
 	// base datos
 	public static final String bdOracle = "oracle";
 	public static final String bdMysql = "mysql";
 	// public static final String bdSqlServer = "sqlserver";
-	
-	//dataMobile
-	public static final String featRutaMobile = "src/test/resources/dataDriven/dataMobile/DataForMobile.xlsx";
 	
 
 	// EPI constantes
