@@ -18,9 +18,7 @@ public class CasoAsignadoPage extends LoginPage {
 
 	
 	protected WebDriverWait getWDW() {
-		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
-			// wdw = new WebDriverWait(getDriver(), 300L, 1L);
 			wdw = new WebDriverWait(driver, wdwTimeOut, 1L);
 		}
 

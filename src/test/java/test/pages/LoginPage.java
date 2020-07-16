@@ -53,11 +53,8 @@ public class LoginPage  extends PageObject{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-  
-
     	File resulta = new File(dir.getUncPath());
-    	
-    	System.out.println("***" + resulta.getAbsolutePath());
+       	System.out.println("***" + resulta.getAbsolutePath());
     	
    	try {
 		System.out.println("Inicia la construccion");
@@ -70,7 +67,6 @@ public class LoginPage  extends PageObject{
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
-//		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
 		caps.setCapability(MobileCapabilityType.APP, resulta.getAbsolutePath());
 		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
 		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
@@ -81,20 +77,14 @@ public class LoginPage  extends PageObject{
 //		URL url = new URL("http://172.26.40.137:4723/wd/hub");
 		URL url = new URL("http://192.168.1.9:4723/wd/hub");
 		System.out.println(" INICIA DRIVER");
-		
-//		driver = new AppiumDriver<MobileElement>(url, caps);
-//		driver= new AndroidDriver(url, caps);
 		driver=  new AppiumDriver(url, caps);
 		wdw = new WebDriverWait(driver, 10);
 		double longitud=Double.parseDouble(coordenada[0]);
 		double latitud=-Double.parseDouble(coordenada[1])*-1;
 		System.out.println(" longitud  " + longitud);
 		System.out.println(" latitud  " + latitud);
-		
 		Location loc = new Location(longitud, latitud, 0);
 		driver.setLocation(loc);
-//		driver.resetApp();
-
 		}catch (Exception e) {
 			System.out.println("Cause is: "  + e.getCause());
 			System.out.println("Cause is: "  + e.getMessage());
